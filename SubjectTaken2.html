@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-color: #9933cc;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.row {
+  flex: 1;
+}
+
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 2px solid #ddd; /* Add border to the table */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.col-6.col-s-9 {
+  position: relative;
+}
+
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+  clear: both;
+}
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+  clear: both; /* Add this property to prevent overlapping with floated elements */
+}
+
+.pagination a {
+  color: black;
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Johnie Niel Derubio</h1>
+</div>
+
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+    <ul>
+      <a href="index.html"><li>About me</li></a>
+      <a href="SubjectTaken.html"><li>Subject Taken</li></a>
+      <a href="SubjectCurrently.html">  <li>Subject Currently Enrolled</li></a>
+      <a href="Contactme.html">  <li>Contact Me</li> </a>
+      <a href="Myfavorites.html">  <li>My Favorites</li></a>
+      <a href="Gallery.html">  <li>Gallery</li></a>
+    </ul>
+  </div>
+
+  <div class="col-6 col-s-9">
+    
+    <h1>Subject Taken 2</h1>
+    <table>
+        <tr>
+          <th>Schedule</th>
+          <th>Subject Name</th>
+          <th>Description</th>
+          <th>Units</th>
+        </tr>
+        <tr>
+          <td>10101140A TTH</td>
+          <td>MATH 1</td>
+          <td>Mathematics in the Modern World</td>
+          <td>3.0</td>
+        </tr>
+        <tr>
+          <td>07000830A TTH</td>
+          <td>EP 1S</td>
+          <td>English Proficiency</td>
+          <td>3.0</td>
+        </tr>
+        <tr>
+          <td>03250425P-04300600P MW</td>
+          <td>CSIT 3</td>
+          <td>Computer Programming 2</td>
+          <td>3.0</td>
+        </tr>
+        <tr>
+          <td>11450115P MW</td>
+          <td>ITP 1</td>
+          <td>IT Fundamentals</td>
+          <td>3.0</td>
+        </tr>
+        <tr>
+          <td>1145011P TTH</td>
+          <td>ITP 2</td>
+          <td>Discrete Mathematics</td>
+          <td>3.0</td>
+        </tr>
+        <tr>
+          <td>01200220P TTH</td>
+          <td>PE 2</td>
+          <td>PATHFIT 2: Fitness Training</td>
+          <td>2.0</td>
+        </tr>
+        <tr>
+          <td>01000400P SAT</td>
+          <td>NSTP 2</td>
+          <td>NSTP 2-Literacy Training Service 2</td>
+          <td>3.0</td>
+        </tr>
+      </table>
+  </div>
+   
+  <div class="pagination">
+    <a href="SubjectTaken.html">&laquo;</a>
+    <a href="SubjectTaken.html">1</a>
+    <a href="SubjectTaken2.html"class="active">2</a>
+    <a href="SubjectTaken3.html">3</a>
+    <a href="SubjectTaken3.html">&raquo;</a>
+  </div>
+
+
+  <div class="col-3 col-s-12">
+   
+  </div>
+</div>
+
+<div class="footer">
+  <p><h3>© 2023-2024 ITP4 | All Right Reserved</h3></p>
+</div>
+
+</body>
+</html>

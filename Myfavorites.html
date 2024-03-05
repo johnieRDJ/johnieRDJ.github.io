@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-color: #9933cc;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.menu a{
+  text-decoration: none;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+  margin-top: auto;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.row {
+  flex: 1;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+/* List Styles */
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/* Favorite Styles */
+.favorite {
+  margin-bottom: 20px;
+}
+
+.favorite img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Favorite Text Styles */
+.favorite-text {
+  margin-top: 10px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Johnie Niel Derubio</h1>
+</div>
+
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+    <ul>
+        <a href="index.html"><li>About me</li></a>
+        <a href="SubjectTaken.html"><li>Subject Taken</li></a>
+        <a href="SubjectCurrently.html">  <li>Subject Currently Enrolled</li></a>
+        <a href="Contactme.html">  <li>Contact Me</li> </a>
+        <a href="Myfavorites.html">  <li>My Favorites</li></a>
+        <a href="Gallery.html">  <li>Gallery</li></a>
+    </ul>
+  </div>
+
+  <div class="col-6 col-s-9">
+    <h1>10 of my Favorites</h1>
+    
+    <div class="favorite">
+      <p class="favorite-text">1. Listen to Music</p>
+      <img src="https://i.pinimg.com/originals/07/cb/bc/07cbbca7606dc3e7600ca8383c5e6708.png" >
+      <p class="favorite-text">Description: I love music although my voice does not cooperate.</p>
+    </div>
+
+    <div class="favorite">
+      <p class="favorite-text">2. Frisbee</p>
+      <img src="https://www.activesgcircle.gov.sg/hs-fs/hubfs/Circle%202.0%20-%202021/images/Gendermah%202014%20Frisbee_2014_04_19_Boon%20Ping%20Chua_AH3U3747.jpeg?width=800&name=Gendermah%202014%20Frisbee_2014_04_19_Boon%20Ping%20Chua_AH3U3747.jpeg" >
+      <p class="favorite-text">Description: Frisbee makes me energetic since it requires cardio, physics, and agility. It is fun to play if you have a circle of 12 people.</p>
+    </div>
+
+    <div class="favorite">
+      <p class="favorite-text">3. Watching Movies</p>
+      <img src="https://ventsmagazine.com/wp-content/uploads/2019/12/best-strains-high-movie-watching.jpg" >
+      <p class="favorite-text">Description: It is one of my stress reliever. </p>
+    </div>
+
+    <div class="favorite">
+      <p class="favorite-text">4. Playing E-games</p>
+      <img src="https://cdn.vcgamers.com/news/wp-content/uploads/2022/04/main-mlbb.png" >
+      <p class="favorite-text">Description: It is fun to play with especially if you have a distance with your friends. </p>
+    </div>
+
+    <div class="favorite">
+      <p class="favorite-text">5. Vanilla Ice Cream</p>
+      <img src="https://handletheheat.com/wp-content/uploads/2021/06/homemade-vanilla-ice-cream.jpg" >
+      <p class="favorite-text">Description: It is balance of sweetness for me.</p>
+    </div>
+
+    <div class="favorite">
+      <p class="favorite-text">6. 4am Walks</p>
+      <img src="https://i.redd.it/10ipx11uwila1.jpg" >
+      <p class="favorite-text">Description: In the pandemic times, I always go-out at around 4pm, jogging and what I love the most it is peaceful and cold breeze. </p>
+    </div>
+
+    <div class="favorite">
+      <p class="favorite-text">7. Talking with experienced people</p>
+      <img src="https://www.medallia.com/wp-content/uploads/2021/11/social-oct_blog-hero_ex-practices-1024x576.jpg" >
+      <p class="favorite-text">Description: I can learn from them, mostly they are older than me, but atleast I gained knowledge. </p>
+    </div>
+
+    <div class="favorite">
+      <p class="favorite-text">8. Sleep</p>
+      <img src="https://cdn-prod.medicalnewstoday.com/content/images/articles/325/325353/why-is-sleep-important.jpg" >
+      <p class="favorite-text">Description: Without a doubt sleeping is like being safe for my own. </p>
+    </div>
+
+    <div class="favorite">
+      <p class="favorite-text">9. Cooking</p>
+      <img src="https://www.mdanderson.org/images/publications/focused-on-health/2019/web_healthy_cooking_1376x774.png.resize.702.404.jpg" >
+      <p class="favorite-text">Description: I really enjoy cooking and it is a hobby for me. </p>
+    </div>
+
+    <div class="favorite">
+      <p class="favorite-text">10. Appreciated</p>
+      <img src="https://cdn.greenvelope.com/blog/wp-content/uploads/couple-and-a-girl-hugging-each-other.jpeg" >
+      <p class="favorite-text">Description: Whenever a friend of mine needs my assistance, I could change some of my plans. After they are assisted on their problems hearing them saying Thank you, feels appreciated. </p>
+    </div>
+
+
+
+
+  </div>
+
+  <div class="col-3 col-s-12">
+    
+  </div>
+</div>
+
+<div class="footer">
+  <p><h3>© 2023-2024 ITP4 | All Right Reserved</h3></p>
+</div>
+
+</body>
+</html>
