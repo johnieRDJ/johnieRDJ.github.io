@@ -5,17 +5,11 @@
   <title>Bootstrap Example</title>  
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style>
 * {
   box-sizing: border-box;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 .row::after {
@@ -39,10 +33,6 @@ html {
   padding: 15px;
 }
 
-.menu a{
-  text-decoration: none;
-}
-
 .menu ul {
   list-style-type: none;
   margin: 0;
@@ -50,7 +40,7 @@ html {
 }
 
 .menu li {
-  padding: 8px;
+  padding: 15px;
   margin-bottom: 7px;
   background-color: #33b5e5;
   color: #ffffff;
@@ -76,7 +66,9 @@ html {
   text-align: center;
   font-size: 12px;
   padding: 15px;
-  margin-top: auto;
+  width: 99%;
+  position: absolute;
+  bottom: 0;
 }
 
 /* For mobile phones: */
@@ -84,19 +76,21 @@ html {
   width: 100%;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+.carousel-inner {
+  width: 100%;
+  max-height: 500px;
 }
 
-.row {
-  flex: 1;
+.container {
+  width: 100%;
+  margin: auto;
 }
 
-.carousel-container {
-      margin-left: 100px; /* You can adjust the value to move it more or less to the right */
-    }
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
 
     @media only screen and (max-width: 767px) {
       /* Adjust the margin for smaller screens if needed */
@@ -135,6 +129,25 @@ body {
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
 }
+
+img{
+    height: 350x;
+    width: 300px;
+    float: left;
+    flex-direction: row;
+    margin-right: 15px;
+}
+
+a{
+    text-decoration: none;
+}
+
+table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+
 </style>
 </head>
 <body>
@@ -146,7 +159,7 @@ body {
 <div class="row">
   <div class="col-3 col-s-3 menu">
     <ul>
-      <a href="index.html"><li>About me</li></a>
+    <a href="Aboutme.html"> <li>About me</li></a>
     <a href="SubjectTaken.html"><li>Subject Taken</li></a>
     <a href="SubjectCurrently.html">  <li>Subject Currently Enrolled</li></a>
     <a href="Contactme.html">  <li>Contact Me</li> </a>
@@ -155,81 +168,87 @@ body {
     </ul>
   </div>
 
-  <div class="col-6 col-s-9">
-   
+  <div class="col-3 col-s-3">
+    <h1>Gallery</h1>
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            
+          </ol>
+      
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+      
+            <div class="item active">
+              <img src="1.jpg" alt="Image 1" style="width: 500px;">
+              <div class="carousel-caption">
+              </div>
+            </div>
+            <div class="item">
+              <img src="2.jpg" alt="Image 2" style="width: 500px;" >
+              <div class="carousel-caption">
+              </div>
+            </div>
+          
+            <div class="item">
+              <img src="3.jpg" alt="Image 3" style="width: 500px;" >
+              <div class="carousel-caption">
+                
+              </div>
+            </div>
+            <div class="item">
+              <img src="4.jpg" alt="Image 4" style="width: 500px;" >
+              <div class="carousel-caption">
+              </div>
+            </div>
+            <div class="item">
+              <img src="5.jpg" alt="Image 5" style="width: 500px;" >
+              <div class="carousel-caption">
+              </div>
+            </div>
+            <div class="item">
+              <img src="6.jpg" alt="Image 6" style="width: 500px;" >
+              <div class="carousel-caption">
+              </div>
+            </div>
+            <div class="item">
+              <img src="7.jpg" alt="Image 7" style="width: 500px;" >
+              <div class="carousel-caption">
+              </div>
+            </div>
+            <div class="item">
+              <img src="8.jpg" alt="Image 8" style="width: 500px;">
+              <div class="carousel-caption">
+              </div>
+            </div>            
+            <div class="item">
+              <img src="9.jpg" alt="Image 9"  style="width: 500px;" >
+              <div class="carousel-caption">
+              </div>
+            </div>
+            <div class="item">
+              <img src="11.jpg" alt="Image 10" style="width: 500px;" >
+              <div class="carousel-caption">
+                
+              </div>
+            </div>
+          </div>
+      
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
   </div>
 
-
-  <div class="container carousel-container">
-    <!-- Your existing carousel code remains unchanged -->
-    <h2>Carousel </h2>  
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
   
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="https://lh3.googleusercontent.com/pw/AP1GczPhQYkrtEf4NV625r1d2EmXqk81iQ3GxedEEkF2X2pLyrhlM-L8fDyPRkisNuGEBjH0-BsZt_vWz_Fs2FTBFConsavV1gK_7UXiLI1j7Gf6CcBhoTeBQuWkmz5avRDuGgZ6-DJYbktZmCjkfTs7f8NsFLme4A1rUy7MU_adGzrjJA9NoE40ieily9dzMOz30yNYgJ3N7SELHHOD27jolEwu9fX7fG0nvSdfqPGVWMYdBEsQJKmmfC9Rigis9Gby3Pdlx7rmd3a22yIQW2fpWtSU0qJEfkP-oUqa39JholHXSy8KhK1tczOYnTfmlQZZSBdx0tWGVmAF4U37aWFok48-68bui-WPqvI_sIvvK9SD-bFsyekvh7KdQoydpaSZu-CQm4PXPodhKaFouVkQSPobmbgMcgTj13_Im0EWpFnReCoAvJ7m_ZcFXlrklSPt9U2zQR8guxBHFfypNLS_rHk_k-iPGaI8Mb4mwZocbk-z73-KLkzcWISuDJnf7V8abKMhQnhjoeLetUV48LPT0HwzcA6UvkKb3rMKfgv2KOwOZDZXfxFiRtEovzmZstQLeFSvsEZl-O1-j-4XHkzQEeZh9IzMdk-SFrAl6GN8x_TAIVP4jYbPERU_DwFtcAP2qowosMeqv2UZOGfchZB3zrVGjpQsbQ3JxKrecsVutqEu3zj3fMLFmrGS0r-KmEmgkPzMP8Ym01nkKB8TYoXaFX4rdZZdb4seX1v1XsQYlQvdo3_DVA3RVvVD3iEKZxmN0NBVW2x6zmLnef1df2gKosE-eohqQ3Wk00FHnFPRiyYESxlCLDjzF3pPiDsDwTmr_qP9YOBhAgA8yARPVWnyajCyx8S-DIsC1psz5Bm0S0G6fuRcEd7oCDGcunnaYbhZdi2m9mHY3MIbwAd1IzO8rkivVCelJfCJ1_lmNTT5J1S-QRMPU6TfgcanZcpIafM431ytRTP4AWdzuwQUcywLEgilI1ve=w700-h933-s-no-gm?authuser=1" style="width:100%;">
-        </div>
-  
-        <div class="item">
-          <img src="https://lh3.googleusercontent.com/pw/AP1GczNwmmL2xdjTk_fjeyX___xVVuu31yW4np1CJuFLa1cklPsfbmEqX6PCHCx_DfzWxulWAObgBZBL2-PM9hSG5dOfkOMZvZwpDDcIwX-7aNpFzhrJ5IoqgujXrNTIahwE-iE5RoNzCoFBTxbbCMPOaQNFX2apvC6FdocKninv-48M_IEkcDT7aKueJ4C10LZwmB2C3WXDZolCzGhRR37xWlDRTzTE0sRzE9VBl-ozPOk0xSw_DshdZpRyE0kKoDv_fAlm1E4rTBCohsp0QKdEv0lyFMNQNR5wsva6uJMYeG_MxUjda77EnHS5KRPpY3FtMOGVoOaVhTThU-6kNNFQ70Eh8uBVsXdxxf3H4EQwkxts1kL8e9oqe9Xi-gvnr4Fg_n6p8eYy4dY5QxeekdXIe232bN6ILr07sMtuckE0A_FxMkNps7NBwPj2cmC3RusVJJ9uXCIb-I5mfhvhljNRH551OusSA56-tHXbzVSVSuIHVKHf44_0PHEROVTbzIgloZE0MurVtEpSC5YWu_9aIhFVtB5-DjaPCQz8zYcw0YUlTUhf50th3TSm78v4VPy0FxaEaQZ_qQ_QjESUThHWplnegNclwLGT78ICf7ipUBBGfRAVnu3PMsX84kvRMUwgczJOUksT2auNu8AZZw7eRvK_tIYQxQTSXMKE-ByzYUtp1qRGY9o_XYL7M0HPklYB6rYY4SdMzXvZ-ilE3xs6D9OVRR-8eHnPKPcSgFGEbqMuN56fJLHVa7xe6OWotWN6m1LEwm_aIAY0-UQg4rwlnWrPIPkN_dZPO6dLsn8iKHP-vCUfZZxpdu8XedmyJKSQw_sgXLa0xmzrUOgZ31riinrnwi_SjhUy0Y1545F1_IG5o05LBVPNpn2y4LB8YD4NcjozxmzwO5eXGp7KswmxImTkn9ajGrM0vuzmtf52xfP0luPrZvaDdqzhLhi6Ppm2YpC1K87HynRdfec1D4uk-wDBXpXD=w700-h933-s-no-gm?authuser=1"  style="width:100%;">
-        </div>
-
-        <div class="item">
-          <img src="https://lh3.googleusercontent.com/pw/AP1GczPOWJ9gLbzR83rHI7GCoHAH4-Fx4JgxvQxIHRjL5MXMPl5e2IMEwynmTrP7TjcT59Sj0kacYyOMJOkykUT3gHwBwieykpAAD6c1SKaVUJU0HbfhPyHgW3KER1pOH0aIv7FDrB9ueGlOzrC1UIyjrv_ahBI0wDl_1dBkNXKcOEqaDBmZNvfsAkRhUmPOqRgALxcmTniYux7ZgGAopVghJiI6STPVmCgQ2vw_kZokUZki3c7-b-mzcnwXk8P0sp6OEJ5gzJhrgahm1g8YUkvbHLPIRm4uEmDJRwOiEw2icBmIv3AXplx8onrRxANOxkWhgOiLR3tl3hoDkUT2qHQ0rtoymVjFzUD0GJOjJ9W2xcsmNXjK--lNBMLXncPikK6LMfKBy3-CFaGOwjcXZkcvDYNqTe9uo6WSooGgdM8PEPRXnWnSSrB0mZR1N79quUMfcBStBJ6crKgm8qNEl8Z1NNSoPOvJtVG0aCa24Barw0s8hUZrI34Xu8vHlrat3OZM-w5Y5dWkqk5B_MPW-XBi_LKpqsHwCDpYiNGMOBaISoQYzP-T_SJxBKunfUbfdwYo8DeRC7WCe31GIH5D8ARNiZrf3dONpRflN6s71r4WsH9zcM75Rnf9yyc8i0JjomC7t6eGxRXPDwWynFM2OeDGV2Sd46BlPuG9JQ0v-YbjbmVJ2ijswhdwtnE74urqLqtZGwsNUx-TEBlSx1MkL50ILl1_4TLAn7IdkDiqAvJ_AQv93jUwC9yAzjkdOBrsssmUjS4h8D12LQUBtn9Kdog94N1hoMu_BmHnQsdJCaGDRGM8q-TdN0UtRefl_E5ZgFDnZQZQRpL7IJ9xR4rDV-tVwh4qjgvq5felk8zdwsKmAQavcfa4khuaIzQQoiciou5feb6CKzVDdpkGV41kow23s6OYjIvUeSpwqpCZK73jaHlarPqB6UZja-Z_ty2V7-95vH-VV3rtf48h84VHSKalX0UCEV5t=w700-h933-s-no-gm?authuser=1"  style="width:100%;">
-        </div>
-
-        <div class="item">
-          <img src="https://lh3.googleusercontent.com/pw/AP1GczN5PJuIZqYn_34u5YNVeZaRpA1NcJ1cbormtapfasW2KeD16hDJrn-Vn6G4I7DBs-Hjidm7D_a-QH-GVqBPVWDjxKXqB06BOYUD0-30UNN5EluqfVy_ZHL2kX0hyegGaWZ9KNJJ76zh3mPMFbpm4_ikKydCJihffaxs1oRBW5KbcXE9H-fxJLaOsiGPbW-8eJxD9iu8liGMoyQDGgl3zZmazPxVamgHA7sln69qmucUukU_c316SWqcaWF6ZtvcD7PkYiL1jipUiG0qGJtU_br01lV9ADSzUlQNGsWc-rwDcV4ZrgiHssS-qBbe0oNhEmyx-WDqVU7emtrmC1rAb2UoA5Eo1R_nkVEntkTOkuJstNHAz3Z3ZnZoMm69HuvM2NVM4CEA-2kNjFUblRo5p28rN6ujYjEzVvwKMcCn7uwHb0MXKMp_kA049KZaO7aTxDo5-QJs4opqMyphqflUjn1ubHucXuv1G5kguHdQSfYZpgPPxQXcShDn6u_IqHTNPLCURaPxAo8mCcZtIp3Hc0Lv4E_txq1Dty1VdiZmrkIZ3USJVB2FcU2ovEYVogP5_8NlqoRlFJ9aC3EXZO8a4U4pT6jGs0AGjwKnsPTkjQdK4_zEpeDIasbOIJbvjctyenUON2S5B2veYqzxxagcZCwF6Uci4os9MI7QsO0qLrPglrG5_nWbHfnOwb-mRX97qjea8piKG4JptnUdCw03Yxy-3bynDOJj7I1Tr5n1-rCaXzfhlBncZ7pGkg7mltSv-ca0Y0Q_3ZTx5GpseWfL2nc5MUNVCHoLFmXLBubEh6X3E5tYT-HtwjE3WPMUJbc1mQHhw-kmU6F2ApenzI1P7zJ7KvAYntBlEqLx87q-gLKti6q5ZVIadj4iZ4yDLt-97jj3HuCPvrBRNn75uv-KTLe6MbGahiQW4Bec-mmYpnppmNpqPGIEb8ETDQn4_-y11QM7pfUvc6dn55xibdnrH8QrBVd5=w933-h933-s-no-gm?authuser=1"  style="width:100%;">
-        </div>
-
-        <div class="item">
-          <img src="https://lh3.googleusercontent.com/pw/AP1GczPtyuPi3AUcoTDmphv5CuG-jF_Stm6bb5LRYw99pL9uuSV5Q3HV8ism4VLq0bVZ1iA9p22Zbb4n6hc4ybz4Z2MB-MIlhF5p5CSCtpMN7HCzvpM4ZZvp-yI0wY8C7fsL4ENQYM9wMJSJT8raGgh0a-lYMur-o9SmISXCAAIFj_cxQs1vmpHZAAoIpBjFvtXnFAoZVA1NCQZM8IfNrDGUWDS8rXfNUH7SyAjDPcY8_vD08huuL5HnIaJr-UTCybMM8SFUZ2S5sZPRdQSC2mj-SRmeVM7mNGP-51cO-36ULeGDmvSaqt8_bdrI0lqF2S3_rY845EQd5saGa5QwUYOwnhrqO8voe9DwTyEEVcefS9LHFVUkl4I7Z9ft7eBqVU3FXHnAsnMBlDxw7Ipzg1f1hrxdHPFXjYli7jaeABU3jcE1EFxrGkKYtowh6rrP3ahRJc3s-ZuCy4ferR3KRKuKcLJj9mXLESmT4-sqVnglhwq280WCwI0bgFz6YYhLRn3BgLGjm1mAkYYQ2vEVRWmpat6V4rwu283Grz9VMjpy3FWic37CNN8Dxzhyji7Qp42sdZ3e7tD2JAtUlhyQX8bB63bnYWpK63eodFkN22QvJIwqaF9TBWcEBuG1mXAFIFNLS5BzdUA28otSmEfiCpPVkuUWWDsvSiMpf5fz-e9cNm-j3ZqBLBY9RrsX3YwXhavlw65pEGqd1EqOy7SFAqA96bc3UNmg5JHqB7jJ7_U_86e-e5w4cEjCKnS7wZ7MaIqESivSmuGQDj06vpS7QoPHzSBf2mkszxehE6Xa7dT2_5L1xHZAqRmAYTUwjkdvp2A-SzzGsQ4ixbbo1ThQgciNY12tocUGm2S5ATj_2x-04pgwYHYgb_nvJ94kcqLpx8KpFKXiq7T1xZhWNjkpH3vpIk-x9rBMYnzakvvVYhYVWwlyOA-VF80Vu95OLRSjxWxXPgFi04BSUgbv7NDSY30wDM467REn=w1244-h933-s-no-gm?authuser=1"  style="width:100%;">
-        </div>
-
-        <div class="item">
-          <img src="https://lh3.googleusercontent.com/pw/AP1GczPKEnyPivWk7kLwPZOtPQGlTliPm_mKfPs18huQc29TN4IcpF8TdthaQ6-h96lnhhlmcCUi4Kr_NJnr_c27zM2DAWfCPjF6oltQ1pXtb8iLsuS4RYF2_kTXuaqUF1LU7iO-qFTwhSH_ujfoXn8hREPrjYex_fmCmbgvHFs99GGPfsHSR6F3dwbOyNLOIW0oJqCYO0Na3Ox36EcqKHn4yqQfUprHSyRiCnAis-UpluXF4sEe_nK5U2-zQv0OTTV-vh5tX7rI5Jz0IcSr9QfVuFtTYPy56GyLTEyT7pAP6PiW6ljz22BAd-qo9uL5tinSw_Ez42fOn7njIKavP6FsyBIMYhYnYT72wjW7zXxfqKcnSXPcxkv0OKoE9xLaPBrWwjvuFsf0XER_HJgDtjAOCWKfBDkPq2OikiOflf6_tfgubVkOt3vOWjq8sWT7vXGmngQgTJ866Xdt5Nj8bBoe4h6c4KqGqSG5tlnv6E1exgTA629d55LQuyzbL9kSgB0oRjOEFC2vc_84MCcPw9mOVJWAT6Y23mbReePExa4ihAUNjCcO9Ao1fgmzz4QLnPE_4eswLNH1OnWi7eG10BbP_twIEvCCwU3Hacg-yLMOUuYY9bS9mWJ7sjudtA5rTbsf-qatOH7eI1IS3xuujQ_XTF2q_jrEq9TQiSs-74NQKFgzeS0h4rW3ZPHK3xiZQ6UYvh6kWJRlX3g2Q-S6QR4NYrZDnCh4lmkxevhN_MMP4_NRCIOhXf7wzZJFMgM_AAoEeTAo20Wl-VkNqy3DWWijr6QyJcyJrwrE230BnNf7futhi1bn-bdqM2CXppyAuoIgwAy9RsPl4BTulAVaujSDNx-yQw2ctWwlKA62_HP7_5CtYQCqrvzPttCDMNt5LNUT35FgHrxureCuDkh_FNIUwC4-vEmRKuhg4UcEMMgS0j9GZ9u3xwbBbc90pMJdQ3RjAXNGIsSAT9roR-Pt5EfR3-mM1UHg=w933-h933-s-no-gm?authuser=1"  style="width:100%;">
-        </div>
-
-        <div class="item">
-          <img src="https://lh3.googleusercontent.com/pw/AP1GczO4E7gUAvm0EtmXVaZLtPMbaxEV0zQBaaztgwrvwhBP99ZJg94d1IrGA2f1IdtNLA4Lql7O522_4q1iTH2ecvFac2Xn-DVMXQO_eWgbhRJzLyM_FXQ_VGXj9SiIF8YTF29wZALJ6pvGNKEDxBWQ-3f402qLHWXd85wtWKm1WA70xRSIP2OY2Yos9bePZtgBI4Lg96bxgWWAlaC3iWROhIqs9ofxOkSEBLfXkqgZLZ5hrrJwX7kTn0P1VKadvicYyc13Kzy-Lh5sTxp1VNvSiqzH4FrkkrSk7ncX6l4VCvXI4hDZa5dAHgpAeCBqeInsLq9KvPniueCy3b8gieB5eM_cTCfppg_V8WXcsRyh0SggRgNxK4O-wektu4XNh-UHr4OZvGLJyWa91fJ_ka6f9Iuo9cb9kzeP6DJGFjYF9B9x-zI7qjS5EmVy3uVvSWG9TBAV5lw5R1GSzmtKd6Bnfam83ls551Ly1YgV2gYm_yRMa2ShIiqhp7dFGXpUuhyYCDUYxacVzB2Fi8yuNXKl1xNGj7Wo1-Kja7RmJ2Gor2J6CgPTqvMwJZDH5k47CLYjOezcikGPa82O7A1AaV7VzSZmljhNUHhxUWYtJAIE_uss_ed7tyBgD8AHLrWOIQQ84844nN9ksAnDA7R36aswhnlzpWwcmJE7sL9vhroNz89-O1TUEK4Oeu5vqmpQLhFNJ0vqsrCMqMGALlqQGMMDLWB777sENLIwSuOb2CzYH-60hh42VwV7CJWihZwv9O-TlwI_9XL9tCi0YQH7yI9Z-1ZEU7aexSI8j7kV4loxGCXpiKlmW2qpLWmyaL-e9xb5m6y4NClMdSKwd2OSaqmtHPOL8uTTkwCvlxNCW7yTgxX_wE9ww9ufI610TaSXlHEf5I9VSj7L6p8eovJl9ALWD_2WOXjJgVDwFyD6BevX6cCYrZ6nx1K9TPwP7GyDDK94fx-VSK3d6OMghbXQlBh0xRxRSlns=w960-h716-s-no-gm?authuser=1"  style="width:100%;">
-        </div>
-        
-        <div class="item">
-          <img src="https://lh3.googleusercontent.com/pw/AP1GczMWpBzSPu1qDmV0ZC2VZrS2SeChCavmmqNNtdsGD9kHUN0dGRzA9XMglbcd_LsrAD4z0UzWQ_UtUqp6CCvEZ3X7xn7y3oJ4IfeT0sI10fiWRvtQvnYbO7NmWeQYFl2L7iev168NUg6qJ340Vsx1V-NrlyQePWuZs9VzbfOG30tGHjiANFw6DtQoDF7WM4l9hBnYspJWIWdTjiIiafhHWxlNM_ZA86-mLzC_nn9vEedpooXpRyes9TXd-jqdnokGQeTDERe1ZqwrK6SzZUHKiTgrJUJc54cm4qsFScq9EAdk5j92WvIXrYY4Y-fcCHT7wzMSz5aDVtcnlDm7eyJrnQcWD0ZoshKGuS-pFw-FoM-N6v3lbzlrhtw20Mw2XDmu0axJoTb10R6rDOSECVkbi1qIijEidWwyQG8ewl4Pd2P5Eq0liU5ePISljFY-w2cUYd7n_BN4XyGGMqHn3axCeARRSnaTX7NKrmRbmHG4Ebb7uRYKGaGbqWFH8Q3eIhI-Q7XEUrMJzjYBWDMy3G1f4lwjqRxnJQ8XxmntaJZT0otValPlxwOD5QBlpWWrJKdGkK3ceaGZUPbQdjJCApHCffC1TzP4oh2r95RBLBBGTJy4XHQ7J-pJQuC0DgKej3hJY_qpxfKboh6gljqJ8pI5lwtCNcwODPBdeV9NSphEoKtddMpJVcH7L0OCv0zl_kAjhy_pBQ6iTjjv07v8kmsu4FzqFYDxXb-jnOCXloepuU8BP6a1TVhJAWThHhA571A96C3xNnGogADmqjt27nAsrDHO1LGuSFnssklKVWWUoeoSj9FB2xpv-VQNru0SI4uO8Dz4-TuJHg7nC-BqCl9B_sfT8VkcUyHVPncuISzkRx5hDphsPzq66ANTImFRdYFLzcFB2jYbf_Hvug3kIQaLgYyDQCvUg-U721-EOXYvRHH0vhj0keRk-IzHXWuEcRkprHEKtxT-uXc-x21FwReJeYOrv3Mm=w960-h716-s-no-gm?authuser=1"  style="width:100%;">
-        </div>
-
-        <div class="item">
-          <img src="https://lh3.googleusercontent.com/pw/AP1GczMNiRE4-aledgW9QN0HYzrC2d4wDlcT93pGozdYjLAkDI1CELiaYJAoeu8Vz563tiIkO08Rg3WQ4CZoF3UT83Pl23rIDFHh4gtc5nJERnU-2LYzutWHsreLSP3eSYatsT2IaOeKB00WN6ZKgnoDZtbrVACMW8bOAbcPH4MxrpHj4jePBvutYY0SsWwYq8fKpr5v8BIUqlY4G5-7bx1jSk7ieChCBEHapwYEnRyKl5ti-6FGQt_234z6SRwf7n2wur6uhM20Yy6ouSmgQg9kvvjtv3QBweJ4TDOJURyt_g5uAb3ARJFFaSM-wblgvU8XF6qd-RUxZub8W7e6pmRjusQYHndsU4-9AVN7YxTx2Nwrk68N4q_1srQ87F6fiFTdWRhXYOW3ENzX-RSD0yZPCJ0MRV-LTkHiNNjCOVu4aHicUVZnuDKzbjJCYj3eNjKcCrcx5u_0OEKo7VJG3lR1HScRC4F5VB9lPLVnHiv4QSJ3QlbZcob2HF6y6nTdaEhUX8u1AhjfAkozZSdg39ECvcrOzMqJYKxxCG9ugZk1Ma17_mN9vUib35doLKWP5iIAvi_ZqtzsRF954o81G9ve1Whe9sAWDYxh9hSUqIWi9oIrpDqf1_FD7AFy9PSeg_FpLYZapJtAoTMQfCK4FanTuLueUeJ_8PV8FqK_qS8DsoCvuKDEfhD9IYAf2-llMg-CX0WGolygTrzrLdmTrtrSreEUs2UqJXKv4PJaiaP6WwxwFWjpbDWfkHtVjMNwIKVOnqEbxApcZTrl47qKEU5q7AmCCPCywlEy-B_An_qMflVGKFEWGfD_jUTp52G8W6jXzJ4WDRQbW2q3uKLt_JgwMmR3eHOpcug2naM83Pl6gxgc8PI4C8r0wewOfmDMhcV7Qple-lfMdU18Pp4iTTWXXUwvAue_-UNbQEBePrlypkaTiKK-iGdcrQFuE63jSBK2Gu_ikBKdPY1CJBoM38NjGz1hnMsC=w1244-h933-s-no-gm?authuser=1"  style="width:100%;">
-        </div>
-
-        <div class="item">
-          <img src="https://lh3.googleusercontent.com/pw/AP1GczNhxpmWEon7vC7dADyCYfTYRKIV4Gqxba2RadU6uLFmCnkv2INIwSX3zzJ4P1yD0PieXWOWOXRiAFWBEEhB9XsIxhVWU9gZEkTBY-twiUhSeeTNrw5PwOnXsz4uzSAdNPDL80N-DfynguhcmtVmkIAdXoMNSiRVAIMTR4YZoUNvsWHJlOs-I0EGNkxL50eg0wcmOMYpnxfMFDZAjv_B6jxzEnqrRnfKISG3mJrstQmuT-l7G0eAIGLVYnINYRlW6yF6qCQDKm666Kurt5q-exsXt_GGcqxgqynDHoH0rYqiZo_LliPCOxBbIBNJIEL1rW4kkgKGjE5e-c7hXkXObsUhEcpE5Erhkph4gT4K2AMKP-Hn5jGS3BWk5ANfwmQq0nr3PMpJOQA0gyFceGqmjQS8whvMLSbwQG7TvbfSJxiO1LT2Mr8sbsiMermLLe3CCO1cTz4fVNC1Nb8KMGz6V6zmyvHmhAidbS3JKqz89fQYBcmIogZY9WoWDnmbxMqJj_1-m18mzIz-cx1IZuTYBALBLIm4VVouDz5GJbT9uPpztpwF0OKdhP1TUYBnSBEj2uJHG2VUql15d8M6mEktU7WwdgSOJmK1es1IXjnj4sbkXyErmsYwlVxlMrR6_m_j_evSpOitmahUr-KyatVsbXiaPYLYO_EuMJA4KmN49NV8bgaMSogw-fvPYIwbB4PQEiZfMJqVkJDwt-ttKUPzEG-ciFGOfiDDV0K-sP_eJ66UhizSAcs-9BdatVVrHUYYF06UCZn8TY08O279pK5Av-xoYzG3M938MIOs4hCkqvqtM5se7WUHulPE26MoTe5UhHMZ42nHca55xN6qASGanA_gd0vNFZRhY9IaY8v80dYzqDPLf3TQnrg6xfLr1QKbbJwkWjwB0w-woudk47ejLkM_osyC-SRsGARzInXr2R08rVmVh2AfwSUl1N2b4-FXOmKvvKGf0JlvsICdigTz6KTnWumK=w700-h933-s-no-gm?authuser=1"  style="width:100%;">
-        </div>  
-  
-      <!-- Left and right controls -->
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
-
-
-
-  <div class="col-3 col-s-12">
-   
-  </div>
 </div>
 
 <div class="footer">
